@@ -81,7 +81,7 @@ exports.register = async (req, res) => {
                     from: process.env.EMAIL_ADMIN,
                     to: email,
                     subject: '註冊驗證信',
-                    html: '<h2>尊敬的' + name + '您好，恭喜您已成功註冊，請點擊此<a href="https://localhost:5555/vertify?id=' + userid + '">連結</a>完成驗證來啟用帳號，若不是您本人請不要點擊此連結，此外若未完成啟用帳號，服務器將在5分鐘後註銷該帳號。</h2>'
+                    html: '<h2>尊敬的' + name + '您好，恭喜您已成功註冊，請點擊此<a href="https://alantsai.onrender.com/vertify?id=' + userid + '">連結</a>完成驗證來啟用帳號，若不是您本人請不要點擊此連結，此外若未完成啟用帳號，服務器將在5分鐘後註銷該帳號。</h2>'
                 }
 
                 transporter.sendMail(mailOptions, (error, info) => {
