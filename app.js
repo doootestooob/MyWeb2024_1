@@ -1,15 +1,13 @@
 const express = require('express');
-const https = require('https');
+const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const app = express();
 const socketio = require('socket.io');
 
-const privateKey = fs.readFileSync('key.pem', 'utf8');
-const certificate = fs.readFileSync('cert.pem', 'utf8');
-const credentials = { key: privateKey, cert: certificate  };
 
-const server = https.createServer(credentials, app);
+
+const server = http.createServer(app);
 
 const io = socketio(server);
 
@@ -382,7 +380,7 @@ app.use('/', require('./routes/pages'))
 app.use('/auth', require('./routes/auth'))
 
 server.listen(port, () => {
-    console.log(`Server is running on https://localhost:${port}`);
+    console.log(`Server is running on http://localhost:${port}`);
 });
 //mkcert -key-file C:\key.pem -cert-file C:\cert.pem "alantsai1024.local" 122.99.50.26 192.168.0.23
 //mkcert -key-file C:\key.pem -cert-file C:\cert.pem "*.alantsai1024.local" 122.99.50.26 192.168.0.23
