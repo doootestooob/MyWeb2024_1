@@ -1,4 +1,4 @@
-const socket = io.connect('https://localhost:5555');
+const socket = io.connect('https://alantsai.onrender.com');
 
 var bottomlist = document.getElementById('bottomlist');
 var bottomfrienslist = document.getElementById('bottomfrienslist');
