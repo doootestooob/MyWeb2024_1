@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&family=Rubik+Doodle+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&family=Rubik+Doodle+Shadow&family=ZCOOL+KuaiLe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Long+Cang&family=Rubik+Doodle+Shadow&family=ZCOOL+KuaiLe&family=ZCOOL+QingKe+HuangYou&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#container {
+    width: 100%;
+    height: 100dvh;
+    display: grid;
+    grid-template-columns: 0.7fr 2fr 1fr;
+    grid-template-areas: "left mid right";
+    grid-auto-flow: column;
+}
+
+#left {
+    grid-area: left;
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0.5px 0.5px 5px gray;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1;
+}
+
+#logo {
+    font-size: 45px;
+    text-align: center;
+    font-family: 'ZCOOL QingKe HuangYou', sans-serif;
+    border-bottom: 0.3px solid gray;
+    padding: 20px;
+    width: 80%;
+    order: 2;
+
+}
+
+#controllers {
+    font-size: 33px;
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80%;
+    order: 3;
+}
+
+.controllbtn {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    margin: 25%;
+    font-size: 35px;
+    white-space: nowrap;
+    padding: 0 10px;
+    letter-spacing: 5px;
+    font-family: 'ZCOOL QingKe HuangYou', cursive;
+}
+
+.controllbtn::before {
+    content: "";
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    bottom: -5px;
+    border-bottom: 2.5px solid black;
+    transition: .3s;
+}
+
+.controllbtn:hover::before {
+    right: 0%;
+    left: 0%;
+}
+
+#legal {
+    font-size: 18px;
+    order: 4;
+}
+
+#legal::after {
+    content: "本網站由 蔡宇倫 製作";
+    text-decoration: none;
+    color: black;
+}
+
+#searchbtn {
+    cursor: pointer;
+    display: flex;
+    grid-area: 'searchbtn';
+    order: 2;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#searchicon {
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#searchicon:hover {
+    background-color: #eee;
+}
+
+/* 縮小時 */
+#controllbtn {
+    font-size: 20px;
+    border-radius: 10px;
+    border: 0.3px solid #eee;
+    padding: 8px;
+    background-color: white;
+    cursor: pointer;
+    transition: .5s;
+    order: 1;
+    display: none;
+}
+
+#controllbtn:hover {
+    background-color: orange;
+    color: white;
+}
+
+.searchcontent.active {
+    font-size: 23px;
+    display: flex;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 0.3px solid gray;
+    height: 80%;
+    width: 100%;
+}
+
+.searchcontent {
+    font-size: 23px;
+    display: flex;
+    outline: none;
+    background-color: transparent;
+    border: none;
+    height: 80%;
+    width: 100%;
+    border-bottom: 0.3px solid gray;
+}
+
+#hidesidebar {
+    display: none;
+}
+
+#closebtn {
+    display: none;
+    z-index: -1;
+}
+
+#btns {
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.btn {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 35px;
+    padding: 90px;
+    font-family: 'ZCOOL QingKe HuangYou', sans-serif;
+    cursor: pointer;
+    grid-auto-flow: row;
+    transition: .3s;
+    border: 0.1px solid rgb(210, 208, 208);
+}
+
+.btn:hover {
+    background-color: rgb(210, 208, 208);
+}

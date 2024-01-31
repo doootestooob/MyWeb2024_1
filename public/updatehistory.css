@@ -1,0 +1,452 @@
+/* ===================聊天介面======================== */
+#mid {
+    grid-area: mid;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#midcontent {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#upbar {
+    width: 95%;
+    height: 100px;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#upbar div {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 25px;
+    height: 90%;
+    width: 22%;
+    border-right: .5px solid #eee;
+    transition: .5s;
+    border-radius: 20px;
+}
+
+#upbar div:hover {
+    background-color: #eee;
+}
+
+#bottombar {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow-y: scroll;
+}
+
+.list {
+    cursor: pointer;
+    width: 90%;
+    height: 120px;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    color: gray;
+    font-weight: 600;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    z-index: 1;
+}
+
+#bottomlist {
+    width: 90%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    color: gray;
+    font-weight: 600;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    z-index: 1;
+}
+
+.applylist {
+
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 5px;
+    transition: .3s;
+}
+
+.applylistbutton {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
+    transition: .3s;
+
+}
+
+.accept {
+    width: 100px;
+    height: 50px;
+    background-color: green;
+    color: #eee;
+    border-radius: 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.refuse {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    color: #eee;
+    border-radius: 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.applylist:hover {
+    background-color: #eee;
+}
+
+.applylist nobr {
+    font-size: 35px;
+    color: black;
+}
+
+.list nobr {
+    font-size: 20px;
+    color: black;
+}
+
+.list img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.list:hover {
+    background-color: #eee;
+}
+
+/* =================新增好友================= */
+
+#searchfriendarea {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#searchfriendarea form {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#subicon {
+    display: flex;
+    width: 7%;
+    height: 50%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#subicon:hover {
+    cursor: pointer;
+    background: #eee;
+}
+
+#searchfriendinput {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    border: 0.5px solid rgb(201, 199, 199);
+}
+
+.friend img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+
+#bottomfrienslist {
+    width: 90%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    z-index: 1;
+}
+
+#reqfriendbtn {
+    z-index: 999;
+    width: 100px;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    border: 0.5px solid rgb(201, 199, 199);
+    border-radius: 10px;
+    background-color: gray;
+    color: #eee;
+}
+
+#reqfriendbtn:hover {
+    cursor: pointer;
+    background-color: green;
+    color: #eee;
+}
+
+/* ==================好友列表頁面=================== */
+
+.friend {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 5px;
+    transition: .3s;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.friendbutton {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 5px;
+    transition: .3s;
+}
+
+.chat {
+    width: 45%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: .3s;
+    font-size: 25px;
+    text-align: center;
+    background-color: #eee;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.delete {
+    width: 45%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    padding: 5px;
+    transition: .3s;
+    background: red;
+    font-weight: 600;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.chat:hover {
+    background-color: green;
+    color: #eee;
+}
+
+.delete:hover {
+    background-color: pink;
+}
+
+/* =======================聊天室選擇介面=============================== */
+#chatroomlists {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    z-index: 1;
+}
+
+.roomlist {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    transition: .3s;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.roomlist:hover {
+    background-color: #eee;
+}
+
+.roomlistcontentimg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+}
+
+.roomlistcontentimg img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.roomdetail {
+    width: 35%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    padding: 5px;
+    transition: .3s;
+}
+
+.roomlistcontentname {
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.roomlistcontentmessage {
+    font-size: 25px;
+    color: gray;
+}
+
+.newmegtime {
+    display: flex;
+    flex-direction: row;
+    justify-self: end;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    transition: .3s;
+    font-size: 20px;
+    font-weight: 600;
+    color: gray;
+    margin-left: auto;
+}
+
+.notreadcount {
+    width: 35px;
+    height: 35px;
+    background-color: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #eee;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+#intro {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    z-index: 0;
+}
+
+#intro p {
+    margin: 0;
+    line-height: 40px;
+    font-size: 20px;
+}
+
+#arrforupdate {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    z-index: 0;
+}
+
+.arr {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    z-index: 0;
+}
+
+.arr p {
+    margin: 0;
+    line-height: 40px;
+    font-size: 20px;
+}

@@ -1,0 +1,6 @@
+#mid {
+    grid-area: mid;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS_Main/Sidebar.css">
+    <link rel="stylesheet" href="/CSS_Main/RightArea.css">
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="/CSS_Main/Animation.css">
+    <link rel="stylesheet" href="/CSS_Main/RWD.css">
+    <link rel="icon" href="https://s.yimg.com/zp/MerchandiseImages/DB79DAC6A4-SP-7224339.jpg" type="image/x-icon" />
+    <title>Alan's Web OTP驗證</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <div id="left">
+            <div id="logo">
+                <nobr>A l a n 的 網 站</nobr>
+            </div>
+
+            <div id="controllers">
+                <div id="home" onclick="location.href='/'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black" class="bi bi-house-fill"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293z" />
+                        <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
+                    </svg>
+
+                </div>
+                <div id="login" onclick="location.href='/login'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black"
+                        class="bi bi-door-open-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M1.5 15a.5.5 0 0 0 0 1h13a.5.5 0 0 0 0-1H13V2.5A1.5 1.5 0 0 0 11.5 1H11V.5a.5.5 0 0 0-.57-.495l-7 1A.5.5 0 0 0 3 1.5V15zM11 2h.5a.5.5 0 0 1 .5.5V15h-1zm-2.5 8c-.276 0-.5-.448-.5-1s.224-1 .5-1 .5.448.5 1-.224 1-.5 1" />
+                    </svg>
+
+                </div>
+                <div id="about" onclick="location.href='/about'">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black" class="bi bi-book-fill"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
+                    </svg>
+
+                </div>
+            </div>
+
+            <div id="legal"></div>
+        </div>
+
+        <div id="mid">
+            <div id="logincontainer">
+                <div id="logincontent">
+                    <div id="logintit">
+                        OTP驗證登入
+                    </div>
+                    <form action="/auth/verify" method="post">
+                        <div class="item">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="green"
+                                class="bi bi-shield-fill-check" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.8 11.8 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7 7 0 0 0 1.048-.625 11.8 11.8 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.54 1.54 0 0 0-1.044-1.263 63 63 0 0 0-2.887-.87C9.843.266 8.69 0 8 0m2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793z" />
+                            </svg>
+                            <input type="text" name="verifycode" id="verifycode" placeholder="請從信箱查看驗證碼並輸入" required>
+                        </div>
+                        <input type="submit" value="確認" id="sublogin">
+                    </form>
+
+                    <div style="color: red; font-weight:600; font-size: 30px;text-align:center;">
+                        {{message}}
+                    </div>
+                </div>
+
+            </div>
+            <div id="bg1"></div>
+            <div id="bg2"></div>
+            <div id="bg3"></div>
+
+        </div>
+
+        <div id="right">
+            <div id="rightcontent">
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="gray"
+                    class="bi bi-person-fill-exclamation icon" viewBox="0 0 16 16">
+                    <path
+                        d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4" />
+                    <path
+                        d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1.5a.5.5 0 0 0 1 0V11a.5.5 0 0 0-.5-.5m0 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1" />
+                </svg>
+                <div id="name"></div>
+                <div id="loginbtn" onclick="location.href='/login'">
+                    <nobr>登入</nobr>
+                </div>
+
+                <div id="notice">
+                    <nobr>登入後即可使用！</nobr>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

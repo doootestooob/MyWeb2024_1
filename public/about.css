@@ -1,0 +1,73 @@
+
+#tit {
+    font-size: 50px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+#stit {
+    font-size: 35px;
+    text-align: start;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+
+#ttit {
+    font-size: 30px;
+    text-align: start;
+    letter-spacing: 5px;
+}
+
+#mid {
+    grid-area: mid;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+#bg1 {
+    position: relative;
+    background: linear-gradient(135deg, pink 40%, orange);
+    width: 500px;
+    height: 500px;
+    clip-path: circle(95% at 0% 0);
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+#bg2 {
+    position: relative;
+    background: linear-gradient(90deg, pink, lightblue);
+    width: 600px;
+    height: 600px;
+    float: right;
+    clip-path: circle(50% at 100% 50%);
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+#bg3 {
+    position: relative;
+    background: linear-gradient(45deg, lightgreen, pink);
+    width: 450px;
+    height: 450px;
+    clip-path: circle(50% at 10% 85%);
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

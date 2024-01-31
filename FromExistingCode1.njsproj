@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+        <SchemaVersion>2.0</SchemaVersion>
+        <ProjectGuid>{e55dafa1-8ee2-45a7-a217-6b339f0e646a}</ProjectGuid>
+        <ProjectHome>.</ProjectHome>
+        <ProjectView>ShowAllFiles</ProjectView>
+        <StartupFile>app.js</StartupFile>
+        <WorkingDirectory>.</WorkingDirectory>
+        <OutputPath>.</OutputPath>
+        <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+        <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">17.0</VisualStudioVersion>
+        <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+    <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+    <ItemGroup>
+        <Content Include="package-lock.json" />
+        <Content Include="package.json" />
+        <Content Include="app.js" />
+        <Content Include="auth\auth.js" />
+        <Content Include="modules\chatroom.js" />
+        <Content Include="modules\contact.js" />
+        <Content Include="modules\users.js" />
+        <Content Include="public\about.css" />
+        <Content Include="public\chat.css" />
+        <Content Include="public\chatroom.css" />
+        <Content Include="public\contact.css" />
+        <Content Include="public\home.css" />
+        <Content Include="public\login.css" />
+        <Content Include="public\loginsuccess.css" />
+        <Content Include="public\personal.css" />
+        <Content Include="public\register.css" />
+        <Content Include="public\reply.css" />
+        <Content Include="public\updatehistory.css" />
+        <Content Include="public\chat.js" />
+        <Content Include="public\personal.js" />
+        <Content Include="routes\auth.js" />
+        <Content Include="routes\pages.js" />
+        <Content Include="uploads\c5637adch@gmail.com.png" />
+        <Content Include="uploads\h105483342@gmail.com.png" />
+        <Content Include="uploads\s0905260030@gmail.com.png" />
+        <Content Include="views\about.hbs" />
+        <Content Include="views\addfriendpage.hbs" />
+        <Content Include="views\applylist.hbs" />
+        <Content Include="views\chat.hbs" />
+        <Content Include="views\chatroom.hbs" />
+        <Content Include="views\chatroomchoose.hbs" />
+        <Content Include="views\contact.hbs" />
+        <Content Include="views\diary.hbs" />
+        <Content Include="views\emailvertify.hbs" />
+        <Content Include="views\errorverify.hbs" />
+        <Content Include="views\index.hbs" />
+        <Content Include="views\login.hbs" />
+        <Content Include="views\loginsuccess.hbs" />
+        <Content Include="views\otpverify.hbs" />
+        <Content Include="views\personal.hbs" />
+        <Content Include="views\register.hbs" />
+        <Content Include="views\reply.hbs" />
+        <Content Include="views\shop.hbs" />
+        <Content Include="views\updatehistory.hbs" />
+        <Content Include="public\CSS_LOGIN\Animation.css" />
+        <Content Include="public\CSS_LOGIN\PersonPage.css" />
+        <Content Include="public\CSS_LOGIN\RWD.css" />
+        <Content Include="public\CSS_LOGIN\Sidebar_login.css" />
+        <Content Include="public\CSS_Main\Animation.css" />
+        <Content Include="public\CSS_Main\RightArea.css" />
+        <Content Include="public\CSS_Main\RWD.css" />
+        <Content Include="public\CSS_Main\Sidebar.css" />
+        <Content Include="public\JS_common\DetectScreen.js" />
+        <Content Include="public\JS_common\Menus.js" />
+        <Content Include="public\JS_common\RealtimeChat.js" />
+        <Content Include="public\JS_common\SidebarFunction.js" />
+        <Content Include="public\JS_common\UpdateHistory.js" />
+        <Content Include="public\JS_common\Variable.js" />
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="auth" />
+        <Folder Include="modules" />
+        <Folder Include="public" />
+        <Folder Include="public\CSS_LOGIN" />
+        <Folder Include="public\CSS_Main" />
+        <Folder Include="public\JS_common" />
+        <Folder Include="routes" />
+        <Folder Include="uploads" />
+        <Folder Include="views" />
+    </ItemGroup>
+    <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+    <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+    <ProjectExtensions>
+        <VisualStudio>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+            <WebProjectProperties>
+              <UseIIS>False</UseIIS>
+              <AutoAssignPort>True</AutoAssignPort>
+              <DevelopmentServerPort>0</DevelopmentServerPort>
+              <DevelopmentServerVPath>/</DevelopmentServerVPath>
+              <IISUrl>http://localhost:48022/</IISUrl>
+              <NTLMAuthentication>False</NTLMAuthentication>
+              <UseCustomServer>True</UseCustomServer>
+              <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+              <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+            </WebProjectProperties>
+          </FlavorProperties>
+          <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+            <WebProjectProperties>
+              <StartPageUrl>
+              </StartPageUrl>
+              <StartAction>CurrentPage</StartAction>
+              <AspNetDebugging>True</AspNetDebugging>
+              <SilverlightDebugging>False</SilverlightDebugging>
+              <NativeDebugging>False</NativeDebugging>
+              <SQLDebugging>False</SQLDebugging>
+              <ExternalProgram>
+              </ExternalProgram>
+              <StartExternalURL>
+              </StartExternalURL>
+              <StartCmdLineArguments>
+              </StartCmdLineArguments>
+              <StartWorkingDirectory>
+              </StartWorkingDirectory>
+              <EnableENC>False</EnableENC>
+              <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+            </WebProjectProperties>
+          </FlavorProperties>
+        </VisualStudio>
+    </ProjectExtensions>
+</Project>

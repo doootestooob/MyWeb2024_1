@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS_LOGIN/Sidebar_login.css">
+    <link rel="stylesheet" href="/CSS_LOGIN/PersonPage.css">
+    <link rel="stylesheet" href="personal.css">
+    <link rel="stylesheet" href="/CSS_LOGIN/RWD.css">
+    <link rel="stylesheet" href="/CSS_LOGIN/Animation.css">
+    <link rel="icon" href="https://s.yimg.com/zp/MerchandiseImages/DB79DAC6A4-SP-7224339.jpg" type="image/x-icon" />
+    <title>Alan's Web 首頁</title>
+</head>
+
+<body>
+    <div id="container">
+        <div id="left">
+            <div id="logo">
+                <nobr>A l a n 的 網 站</nobr>
+            </div>
+            <div id="controllbtn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                    class="bi bi-list-columns" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M0 .5A.5.5 0 0 1 .5 0h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 0 .5m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m-13 2A.5.5 0 0 1 .5 2h8a.5.5 0 0 1 0 1h-8a.5.5 0 0 1-.5-.5m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m-13 2A.5.5 0 0 1 .5 4h10a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m-13 2A.5.5 0 0 1 .5 6h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m-13 2A.5.5 0 0 1 .5 8h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m-13 2a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m-13 2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m-13 2a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H.5a.5.5 0 0 1-.5-.5m13 0a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
+                </svg>
+            </div>
+            <div id="hidesidebar">
+                <div id="closebtn"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="black"
+                        class="bi bi-x-lg" viewBox="0 0 16 16">
+                        <path
+                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                    </svg>
+                </div>
+                <div id="btns"></div>
+            </div>
+            <div id="controllers"></div>
+            <div id="searchbtn">
+                <input type="text" name="searchcontent" class="searchcontent" placeholder="搜尋...">
+                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="black" class="bi bi-search"
+                    viewBox="0 0 16 16" id="searchicon">
+                    <path
+                        d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                </svg>
+            </div>
+            <div id="legal"></div>
+        </div>
+        <div id="mid">
+            <div id="midcontent">
+
+                <form action="/auth/modifyperson" method="post" enctype="multipart/form-data" id="personform">
+                    <div id="leftpage">
+                        <div id="tit">
+                            <nobr>個人資料</nobr>
+                        </div>
+
+                        <div id="personimg">
+                            {{#if user.filename}}
+                            <img src="/uploads/{{user.filename}} ">
+                            {{else}}
+                            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="gray"
+                                class="bi bi-person-fill-exclamation icon" viewBox="0 0 16 16">
+                                <path
+                                    d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4" />
+                                <path
+                                    d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1.5a.5.5 0 0 0 1 0V11a.5.5 0 0 0-.5-.5m0 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1" />
+                            </svg>
+                            {{/if}}
+                            <input type="file" name="personimginput" id="personimginput" style="display: none;"
+                                disabled>
+                        </div>
+
+
+                        <div id="nametext">
+                            <nobr>{{user.name}}</nobr>
+                        </div>
+                        <div id="personinstruction">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="rgb(231, 137, 120)"
+                                class="bi bi-pencil-square" viewBox="0 0 16 16">
+                                <path
+                                    d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                                <path fill-rule="evenodd"
+                                    d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z" />
+                            </svg>
+                            <nobr>介紹：</nobr>
+                            <br>
+                            <input type="text" name="instructioninput" id="instructioninput"
+                                value="{{user.SimpleIntroduce}}" disabled>
+                        </div>
+                    </div>
+
+                    <div id="rightpage">
+                        <div id="personsex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="gold"
+                                class="bi bi-person-circle" viewBox="0 0 16 16">
+                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
+                                <path fill-rule="evenodd"
+                                    d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
+                            </svg>
+                            <nobr>性別：</nobr>
+                            <select name="sexchoose" id="sexchoose" value="{{user.Sex}}" name="sex" disabled>
+                                <option value="{{user.Sex}}" id="sex">{{user.Sex}}</option>
+                                <option value="男">男</option>
+                                <option value="女">女</option>
+                            </select>
+                        </div>
+                        <div id="personshop">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="rgb(174, 173, 173)"
+                                class="bi bi-shop" viewBox="0 0 16 16">
+                                <path
+                                    d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.37 2.37 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z" />
+                            </svg>
+                            <nobr> 商店：</nobr>
+                            <a href="#" style="text-decoration: none;font-weight:600;letter-spacing:5px;color:gray">
+                                {{#if user.Shop}}{{user.Shop}}{{else}}尚未建立{{/if}}</a>
+                        </div>
+                        <div id="personphone">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="rgb(220, 142, 220)"
+                                class="bi bi-telephone" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                            </svg>
+                            <nobr>電話：</nobr>
+                            <input type="tel" name="phonenumber" id="phonenumber" value="{{user.PhoneNumber}}" disabled>
+                        </div>
+                        <div id="personemail">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" fill="rgb(233, 71, 71)"
+                                class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                                <path
+                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                            </svg>
+                            <nobr>信箱：</nobr>
+                            <div id="emailfont">{{user.email}}</div>
+                        </div>
+                        <div id="personadress">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="rgb(95, 235, 95)"
+                                class="bi bi-pin-map" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M3.1 11.2a.5.5 0 0 1 .4-.2H6a.5.5 0 0 1 0 1H3.75L1.5 15h13l-2.25-3H10a.5.5 0 0 1 0-1h2.5a.5.5 0 0 1 .4.2l3 4a.5.5 0 0 1-.4.8H.5a.5.5 0 0 1-.4-.8z" />
+                                <path fill-rule="evenodd"
+                                    d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999z" />
+                            </svg>
+                            <nobr>
+                                地址：
+                            </nobr>
+                            <input type="text" name="adress" id="adress" value="{{user.Adress}}" disabled>
+                        </div>
+
+                    </div>
+
+                    <div id="filldata">
+                        <input type="button" value="修改資料">
+                    </div>
+
+                    <div id="submitbtn">
+                        <input type="submit" value="確認修改" id="submitpersondata" disabled>
+                    </div>
+
+                </form>
+
+
+            </div>
+
+
+        </div>
+        <div id="right">
+            <div id="rightcontent">
+                {{#if user.filename}}
+                <img src="/uploads/{{user.filename}}" width="250px">
+                {{else}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="gray"
+                    class="bi bi-person-fill-exclamation icon" viewBox="0 0 16 16">
+                    <path
+                        d="M11 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4" />
+                    <path
+                        d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0m-3.5-2a.5.5 0 0 0-.5.5v1.5a.5.5 0 0 0 1 0V11a.5.5 0 0 0-.5-.5m0 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1" />
+                </svg>
+                {{/if}}
+                <div id="name">
+                    <nobr>{{user.name}}</nobr>
+                </div>
+                <div id="loginbtn" onclick="location.href='/auth/logout'">
+                    <nobr>登出</nobr>
+                </div>
+                <div id="notice" onclick="location.href='/personal'">
+                    <nobr>修改資料</nobr>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/JS_common/Variable.js"></script>
+<script src="/JS_common/Menus.js"></script>
+<script src="personal.js"></script>
+
+</html>

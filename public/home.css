@@ -1,0 +1,70 @@
+/* ===========================首頁介面===================================== */
+#mid {
+    grid-area: mid;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#mid::before {
+    content: "Alan's Website";
+    font-family: 'Rubik Doodle Shadow', cursive;
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    font-weight: 600;
+    font-size: 80px;
+    letter-spacing: 5px;
+    text-align: center;
+    animation: appear 2s ease-in-out;
+}
+
+#mid::after {
+    content: 'On this website, everything can be possible';
+    font-family: 'Long Cang', cursive;
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    top: 55%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    font-weight: 600;
+    font-size: 35px;
+    text-align: center;
+    animation: appear 3.5s ease-in-out;
+}
+
+#bg1 {
+    background: linear-gradient(135deg, pink 40%, orange);
+    width: 500px;
+    height: 500px;
+    z-index: -1;
+    clip-path: circle(95% at 0% 0);
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+#bg2 {
+    background: linear-gradient(90deg, pink, lightblue);
+    width: 600px;
+    height: 600px;
+    float: right;
+    z-index: -1;
+    clip-path: circle(50% at 100% 50%);
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+#bg3 {
+    background: linear-gradient(45deg, lightgreen, pink);
+    width: 450px;
+    height: 450px;
+    float: bottom;
+    z-index: -1;
+    clip-path: circle(50% at 10% 85%);
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+}

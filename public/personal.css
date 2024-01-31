@@ -1,0 +1,366 @@
+/* ==========================個人資料=========================== */
+
+#mid {
+    grid-area: mid;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    overflow: scroll;
+    flex-wrap: wrap;
+}
+
+#midcontent {
+    width: 100%;
+    height: 98%;
+    overflow-y: scroll;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+
+}
+
+#mask {
+    width: 55%;
+    height: 100%;
+    top: 0;
+    left: 40%;
+    transform: translateX(-40%);
+    position: fixed;
+    background-color: #000;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* 初始设置透明度为0，使其隐藏 */
+    pointer-events: none; /* 设置为none，使其不接受用户交互事件 */
+    transition: opacity 0.3s ease; /* 添加过渡效果 */
+}
+
+
+#filldata {
+    width: 35%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#filldata input {
+    cursor: pointer;
+    width: 80%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgb(107, 201, 232);
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 2px;
+}
+
+#submitbtn {
+    width: 35%;
+    height: 8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#submitbtn input {
+    cursor: pointer;
+    width: 80%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: gray;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 2px;
+}
+
+#midcontent form {
+    width: 100%;
+    height: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+/* 左 */
+#leftpage {
+    width: 45%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+#tit {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 52px;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    color: rgb(231, 137, 120);
+    text-shadow: 2px 2px 2px black;
+    letter-spacing: 2px;
+}
+
+#nametext {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38px;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    color: rgb(130, 205, 230);
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 2px;
+
+}
+
+#personimg {
+    width: 250px;
+    height: 250px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#personimg img {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+}
+
+#personinstruction {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    color: rgb(231, 137, 120);
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 2px;
+}
+
+#instructioninput {
+    width: 95%;
+    height: 60%;
+    display: flex;
+    justify-self: start;
+    align-self: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    color: rgb(130, 205, 230);
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 2px;
+    border: none;
+    border-bottom: 0.3px solid #a4a3a3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#instructioninput:focus {
+    outline: none;
+}
+
+/* 右 */
+#rightpage input:disabled {
+    background-color: transparent;
+}
+
+#emailfont {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    color: rgb(233, 71, 71);
+    text-shadow: 2px 2px 2px black;
+    border-bottom: 0.3px solid #a4a3a3;
+    letter-spacing: 2px;
+}
+
+#rightpage {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#personsex {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 38px;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    color: gold;
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 2px;
+}
+
+#personshop {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 38px;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    color: rgb(174, 173, 173);
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 2px;
+}
+
+#personphone {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 38px;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    color: rgb(220, 142, 220);
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 2px;
+}
+
+#personemail {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 38px;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    color: rgb(233, 71, 71);
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 2px;
+}
+
+#personadress {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 38px;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    color: rgb(95, 235, 95);
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 2px;
+}
+
+#personadress input {
+    width: 80%;
+    height: 60%;
+    border: none;
+    border-bottom: 0.3px solid #a4a3a3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    color: rgb(95, 235, 95);
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 2px;
+    outline: none;
+
+}
+
+#personphone input {
+    width: 80%;
+    height: 60%;
+    border: none;
+    border-bottom: 0.3px solid #a4a3a3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'ZCOOL KuaiLe', sans-serif;
+    color: rgb(220, 142, 220);
+    text-shadow: 3px 3px 3px black;
+    letter-spacing: 2px;
+    outline: none;
+}
+
+#sexchoose {
+    outline: none;
+    border: 0.5px solid #cdcbcb;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    font-family: 'ZCOOL QingKe HuangYou', sans-serif;
+    color: gold;
+    font-size: 600;
+    text-shadow: 2px 2px 2px black;
+}
+
+
+
+@media screen and (max-width: 1500px) {
+    #midcontent {
+        height: 180%;
+        flex-direction: column;
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+
+    #leftpage {
+        width: 80%;
+        height: 50%;
+    }
+
+    #rightpage {
+        width: 70%;
+        height: 100%;
+    }
+}

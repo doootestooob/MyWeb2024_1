@@ -1,0 +1,3 @@
+C:\Users\h1054\OneDrive\桌面\ExpressJS\obj\Debug\FromExistingCode1.njsproj.AssemblyReference.cache
+C:\Users\h1054\OneDrive\桌面\ExpressJS\obj\Debug\FromExistingCode1.njsproj.CoreCompileInputs.cache
+C:\Users\h1054\OneDrive\桌面\ExpressJS\bin\Microsoft.NodejsTools.WebRole.dll

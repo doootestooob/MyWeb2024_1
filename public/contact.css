@@ -1,0 +1,265 @@
+/* ===================聯絡介面======================== */
+#mid {
+    grid-area: mid;
+    background: #2a2a2a;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#midcontent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#upbarcontact {
+    width: 100%;
+    height: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid #2a2a2a;
+}
+
+#upbarcontact div {
+    width: 50%;
+    height: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 2px;
+    border-right: 1px solid #2a2a2a;
+    background-color: #222324;
+    box-shadow: inset 0 0 1px #2a2a2a;
+    transition: .5s;
+}
+
+#upbarcontact div svg {
+    margin-right: 10px;
+}
+
+#contactmain {
+    width: 100%;
+    height: 92%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #222324
+}
+
+#contactcontainer::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    clip-path: circle(100% at 3% 0%);
+    z-index: -1;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgb(26, 225, 26), rgb(112, 208, 112));
+}
+
+#contactcontainer {
+    width: 72%;
+    height: 85%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    transform: translateY(0);
+    /* backdrop-filter: blur(50px); */
+    /* background: rgba(0, 0, 0, 0.6); */
+    /* background: #222324; */
+    background: #2a2a2a;
+    filter: drop-shadow(0 0 1px #ccc);
+    animation: 1.5s upanimation ease-in-out;
+}
+
+@keyframes upanimation {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#contactcontent {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#contacttitle {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+}
+
+#contactform {
+    width: 100%;
+    height: 90%;
+}
+
+#contactform form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: space-around;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+#contactform form div {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: white;
+}
+
+#contactform form div input {
+    width: 50%;
+    height: 30px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+#contactform form div select {
+    width: 75%;
+    height: 30px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+#contactform form div select option {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#contactform form div textarea {
+    width: 100%;
+    height: 100%;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    padding-left: 10px;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    vertical-align: top;
+}
+
+#contactsubmit {
+    width: 50%;
+    height: 20%;
+    display: flex;
+    align-self: center;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#contactsubmitinput {
+    cursor: pointer;
+    width: 60% !important;
+    height: 45px !important;
+    border: none !important;
+    border-radius: 5px !important;
+    outline: none !important;
+    font-size: 1.5rem !important;
+    letter-spacing: 2px !important;
+    background: white !important;
+}
+
+/* ======================================================= */
+table {
+    width: 100%;
+    align-self: flex-start;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 1px #2a2a2a;
+}
+
+tbody {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+table tr th {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, rgb(26, 225, 26), rgb(112, 208, 112));
+    color: white;
+    border-left: .5px solid white;
+    border-right: .5px solid white;
+}
+
+table tr {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+}
+
+table tr td {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: white;
+    border-left: .5px solid white;
+    border-right: .5px solid white;
+}
+
+/* ======================================================= */
